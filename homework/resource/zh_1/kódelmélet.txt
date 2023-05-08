@@ -1,0 +1,67 @@
+Közismert, hogy ha a 0 és 1 eredeti kódszavakat a C = {000,111} kódrendszerbe vezetjük át, akkor a következőképpen dekódoljuk az esetlegesen hibával érkező bináris vektorokat (válassza ki a megfelelőt):
+010 → 0, 000 → 0, 100 → 0, 001 → 0, 011 → 1, 110 → 1
+Legyen adott egy kódhalmaz: x1: 0011111, x2: 0011110, x3: 0100101, x4: 1100011 Párosítsa a következő kódtávolságokat!
+d(x1,x3) → 4, d(x1,x2) → 1, d(x2,x4) → 6, d(x3,x4) → 3, d(x3,x4) → 3, A teljes kód d távolsága → 1, d(x1,x4) → 5
+Adja meg a tömörítés típusát!
+LZW → veszteségmentes, Huffman → veszteségmentes, JPEG → veszteséges
+A teljes kódrendszer távolsága
+a kódrendszer kódszavai közötti távolságok minimuma .
+Legyen a forrásüzenet halmaza két szó, 0 és 1. Ahhoz hogy egyértelműen (hiba nélkül) visszafejthessük a megérkezés után az üzeneteket a következőképpen kell redundáns kódokkal kibővíteni az eredeti üzenet-szavakat (jelölje az elegendő bővítést):
+0 helyett 000 és 1 helyett 111.
+Mely eljárás algoritmusa látható a képen? [3hitAiSWjXjgCpT_7ZBJsBCjcHD0x4P0vIz2ZyBeN6Q]
+DES.
+{"type":"image","hashedImages":["3hitAiSWjXjgCpT_7ZBJsBCjcHD0x4P0vIz2ZyBeN6Q"],"possibleAnswers":[{"text":"helyettesítő algoritmus","selectedByUser":false},{"text":"RSA","selectedByUser":false},{"text":"DES","selectedByUser":true}]}
+Ha tudjuk, hogy a 0 és 1 kódszavakat a C={000,111} kódhalmazba átvezető kód egy lineáris blokkkód, és ezáltal érvényben vannak a következő egyenlőségek: [0 0 0] = [0] [1 1 1] és [1 1 1] = [1] [1 1 1] akkor megállapíthatjuk, hogy a kódolási folyamat generátor mátrixa/vektora
+[111].
+Az érvényes továbbított kódszóban t hiba észlelése érdekében olyan kódot kell használni, amelynek Hamming távolsága
+t+1.
+A d Hamming távolságú kódrendszer legfeljebb t hibajavító akkor és csak akkor, ha
+d>=2t+1.
+Az a kód, amelyben az r redundáns bitet kizárólag a megfelelő eredeti üzenet m adatbitjénekn függvényében számítják ki (vagy egy táblázatból egy előre meghatározott algoritmus szerint)
+a bináris blokk kód.
+Azokat a blokk kódokat, amelyek kielégítik az (n,M,d) kódhalmazban a Hamming egyenlőtlenséget (azaz a Hamming korlátot), így nevezzük:
+tökéletes kód.
+Az a kód, amely m adatbitet, (az eredeti üzenet kódját), és további r redundáns bitet (vagy ellenőrző bitet) tartalmaz
+bináris blokk kód.
+Mit nevezünk a kódszavak távolságának?
+azonos hosszúsági bináris kódszavak eltérő bitjeinek a számát .
+A kódoláselméletben az a hibajavító kód, amelynél a kódszavak bármilyen lineáris kombinációja szintén kódszó
+lineáris kód.
+Mi ez? Valamely bitvektorhoz rendelt redundáns bit, amely a bitvektor átvitelénél a vevőoldalon hibajelzést tesz lehetővé. Értéke 0 vagy 1, amely attól függ, hogy a bitvektor összege páros vagy páratlan. Ennek a bitnek a neve
+paritásbit.
+Mire szolgálnak a redundáns bitek a kódolás alkalmával?
+a megfelelő kódtávolság biztosításához , a hibafelismerést szolgálja
+A távközlési rendszer mely részén áll fenn a támadás veszélye a leggyakrabban?
+a csatornában.
+Melyik tömörítési eljárás alkalmaz kódtáblát?
+LZ78.
+„Számos különféle transzformációt vizsgáltak az adatok tömörítésére, néhányat kifejezetten erre a célra találtak ki. Például a Karhunen-Loeve transzformáció biztosítja a lehető legjobb tömörítési arányt, de ezt nehéz végrehajtani. A Fourier-transzformáció könnyen használható, de nem nyújt megfelelő tömörítést. Jellemző algoritmusa a diszkrét koszinusz transzformáció . ” Mely tömörítési eljárásra jellemző a fenti idézet?
+JPEG.
+Érvényes továbbított kódszóban t hiba javításához ilyen Hamming távolságú kódhalmazt kell használni (írja le a matematikai kifejezést).
+2t+1.
+Azt az eljárást, amely az illetéktelen kódolvasók által az átvitel során elkövetett aktív vagy passzív támadások ellen véd így nevezzük (írja le a választ):
+titkosítás.
+Legyen adott a következő kódrendszer (az előző kérdésből): x1: 0011111, x2: 0011110, x3: 0100101, x4: 0100011 A kódrendszer nem hibajavító. Igaz vagy hamis az állítás?
+Igaz.
+Elegendő minden esetben az eredeti üzenet kódszavához még egyszer hozzáírni a kódszavat a folytatásban ahhoz, hogy kijavíthasuk a hibás továbbítást.
+Hamis.
+A kódokat n hosszúságú vektorokként értelmezzük. - Legyen M a forráskód-szavak halmaza (2k van belőlük) - n a kiterjesztett kódszavak hossza - d a megadott kódhalmaz Hamming távolsága Ennek alapján a blokkkódot általában a következő rendezett hármas jelöli: (n, M, d). Azokra a blokkkódra, amely legfeljebb t hibát javíthat igaz a következő: \( M \cdot \sum{ \binom {n} {i}} \leq 2n \) Igaz vagy hamis az állítás?
+Hamis.
+Párosítsa a megfelelőket!
+Tömörítési szorzó (Compression factor) → (az üzenet terjedelme a tömörítés előtt)/(az üzenet terjedelme a tömörítés után), Tömörítési hányados (Compression ratio) → (az üzenet terjedelme a tömörítés után)/(az üzenet terjedelme a tömörítés előtt), Megtakarítás (Saving percentage) → ((az üzenet terjedelme a tömörítés előtt)-(az üzenet terjedelme a tömörítés előtt))/(az üzenet terjedelme a tömörítés előtt)
+A Lempel Ziv eljárás
+adaptív szótárt alkalmaz.
+A Huffmann kód (válassza ki a megfelelőt)
+Statisztikai alapú dinamikus tömörítési eljárás..
+Ön szerint melyik eljárást írja le a következő algoritmus? Eljárás ???? string:=olvass_egy_karaktert ciklus amíg_van_input_karakter ch:=olvass_egy_karaktert ha string+ch kódtáblában_van akkor string:=string+ch különben írd_ki_a_string_kódját string+ch kódtáblához új kóddal string:=ch elágazás vége ciklus vége
+LZW.
+Igazi biztonságot csak az a titkosítás nyújt, amely tetszőleges mennyiségű választott nyílt szöveg esetén is feltörhetetlen.
+Igaz.
+Közismert, hogy ha a 0 és 1 eredeti kódszavakat a C = {000,111} kódrendszerbe vezetjük át, akkor a következőképpen dekódoljuk az esetlegesen hibával érkező bináris vektorokat (válassza ki a megfelelőt):
+000 → 0, 100 → 0, 010 → 0, 110 → 1, 001 → 0, 011 → 1
+Legyen adott egy kódhalmaz: x1: 0011111, x2: 0011110, x3: 0100101, x4: 1100011 Párosítsa a következő kódtávolságokat!
+d(x3,x4) → 3, d(x1,x2) → 1, d(x3,x4) → 3, d(x1,x3) → 4, d(x2,x4) → 6, d(x1,x4) → 5, A teljes kód d távolsága → 1
+Adja meg a tömörítés típusát!
+Huffman → veszteségmentes, JPEG → veszteséges, LZW → veszteségmentes
+A kódokat n hosszúságú vektorokként értelmezzük. - Legyen M a forráskód-szavak halmaza (2k van belőlük) - n a kiterjesztett kódszavak hossza - d a megadott kódhalmaz Hamming távolsága Ennek alapján a blokkkódot általában a következő rendezett hármas jelöli: (n, M, d). Azokra a blokkkódra, amely legfeljebb t hibát javíthat igaz a következő: M⋅∑( n i )≤2n Igaz vagy hamis az állítás?
+Hamis.
